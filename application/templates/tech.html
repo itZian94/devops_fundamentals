@@ -6,10 +6,10 @@
         <h1>Technician Access</h1>
 
         <form method="POST" action= "/tech">
-            <label for="ticket_id">Ticket ID:</label><br>
+            <label for="ticket_id">Ticket_ID:</label><br>
             <input type="text" name="ticket_id"><br>
             <label for="status">Status:</label><br>
-            <input type="text" name="status">
+            <input type="text" name="status"><br>
             <input type="submit" value="Submit">
         </form>
 
@@ -22,6 +22,12 @@
                 <input type="text" value="{{fix.status}}" name="newstatus">
                 <input type="submit" value="Update status">
             </form>
+
+            <form method="POST" action="/deletetech">
+                <input type="hidden" value="{{fix.status}}" name="status">
+                <input type="hidden" value="{{fix.ticket_id}}" name="ticket_id">
+                <input type="submit" value="Delete">
+              </form>
 
         {% endfor %}
         <br>

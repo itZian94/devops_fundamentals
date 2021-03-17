@@ -28,7 +28,7 @@ def tech():
     if request.form:
         ticket_id=request.form['ticket_id']
         status=request.form['status']
-        fix = Fix(ticket_id=ticket_id, status=status)
+        fix = Fix(status=status, ticket_id=ticket_id)
         db.session.add(fix)
         db.session.commit()
         fixes = Fix.query.all()
@@ -50,5 +50,23 @@ def updatetech():
     oldstatus=request.form.get("oldstatus")
     status=Fix.query.filter_by(status=oldstatus).first()
     status.status=newstatus
+    db.session.commit()
+    return redirect("/tech")
+
+@app.route('/deleteuser', methods=["GET", "POST"])
+def deleteuser():
+    issue= request.form.get("issue")
+    user= request.form.get("user")
+    ticket = Ticket.query.filter_by(issue=issue, user=user).first()
+    db.session.delete(ticket)
+    db.session.commit()
+    return redirect("/user")
+
+@app.route('/deletetech', methods=["GET", "POST"])
+def deletetech():
+    ticket_id=request.form.get("ticket_id")
+    status=request.form.get("status")
+    fix = Fix.query.filter_by(ticket_id=ticket_id, status=status).first()
+    db.session.delete(fix)
     db.session.commit()
     return redirect("/tech")

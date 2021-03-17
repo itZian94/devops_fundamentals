@@ -15,7 +15,7 @@
 
         <h2>All Tickets</h2>
         {% for ticket in tickets %}
-            <p>{{ticket.issue}}, {{ticket.user}}</p>
+            <p>{{ticket.id}},{{ticket.issue}}, {{ticket.user}}</p>
 
             <form method="POST" action="/updateuser">
                 <input type="hidden" value="{{ticket.issue}}" name="oldissue">
@@ -23,8 +23,15 @@
                 <input type="submit" value="Update issue">
             </form>
 
+            <form method="POST" action="/deleteuser">
+                <input type="hidden" value="{{ticket.issue}}" name="issue">
+                <input type="hidden" value="{{ticket.user}}" name="user">
+                <input type="submit" value="Delete">
+              </form>
+
         {% endfor %}
         <br>
+        <p>Only technicians may delete tickets, as per company policy.</p>
         <br>
         <br>
         <a href='/'>Click here to return to the homepage.</a>
