@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>User Access</title>
+    </head>
+    <body>
+        <h1>User Access</h1>
+
+        <form method="POST" action="/user">
+            <label for="user">User:</label><br>
+            <input type="text" name="user"><br>
+            <label for="issue">Issue:</label><br>
+            <input type="text" name="issue">
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>All Tickets</h2>
+        {% for ticket in tickets %}
+            <p>{{ticket.issue}}, {{ticket.user}}</p>
+
+            <form method="POST" action="/updateuser">
+                <input type="hidden" value="{{ticket.issue}}" name="oldissue">
+                <input type="text" value="{{ticket.issue}}" name="newissue">
+                <input type="submit" value="Update issue">
+            </form>
+
+        {% endfor %}
+        <br>
+        <br>
+        <br>
+        <a href='/'>Click here to return to the homepage.</a>
+    </body>
+</html>
