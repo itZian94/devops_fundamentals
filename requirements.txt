@@ -6,3 +6,6 @@ Flask-wtf
 wtforms
 pytest
 pytest-flask
+flask-testing
+pytest-cov
+coverage
