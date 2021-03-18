@@ -4,3 +4,5 @@ SQLAlchemy
 PyMySQL
 Flask-wtf
 wtforms
+pytest
+pytest-flask
