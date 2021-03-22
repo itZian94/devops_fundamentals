@@ -42,9 +42,12 @@ Due to company non-disclosure policies, all details will be divuldged during pre
 # Source Material
 
 QA Ltd Trainers: Vinesh Ghela, Dara Oladapo
+
 QA Ltd Training material: https://qa-community.co.uk/~/_/learning
 Programming Language Support Material: https://www.codementor.io/@garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2
+
 https://www.w3schools.com/
+
 Python for DevOps, O'Reilly books, Noah Gift Et Al
 
 
