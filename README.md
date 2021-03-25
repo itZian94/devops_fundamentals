@@ -42,6 +42,7 @@ server and deployed to a cloud-based virtual machine.
 ![Risk Assessment](/images/Risk_Assessment.jpg)
 
 - Entity Relationship Diagram
+
 ![Entity Relationship Diagram](/images/ERD.png)
 
 # Source Material
