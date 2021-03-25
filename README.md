@@ -37,7 +37,12 @@ server and deployed to a cloud-based virtual machine.
 
 # Project  details
 
-Due to company non-disclosure policies, all details will be divuldged during presentation ;)
+- Risk Assessment
+
+![Risk Assessment](/images/Risk_Assessment.jpg)
+
+- Entity Relationship Diagram
+![Entity Relationship Diagram](/images/ERD.png)
 
 # Source Material
 
